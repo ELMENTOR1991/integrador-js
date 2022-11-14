@@ -1,0 +1,21 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .inner.row  {
+      height: 100vh;
+    }
+    .primaryBg {
+      background: rgb(179, 5, 25);
+    }
+    .primaryColor {
+      background: rgb(179, 5, 25);
+    }
+    .form-box {
+      background: #fff;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2) 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+    body {
+      background: linear-gradient(to bottom, #5a0e0e, var(--background));
+    }

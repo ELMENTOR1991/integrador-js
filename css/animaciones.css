@@ -1,0 +1,185 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 65px;
+  }
+  
+  
+  .overlay {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;  
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(135, 31, 36, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: none;
+  }
+  
+  .show-overlay {
+    display: block;
+  }
+  
+  .navbar-list li {
+    position: relative;
+    padding: 0;
+  }
+  
+  .navbar-list li a::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: var(--text-white);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.15s ease;
+  }
+  
+  .navbar-list li a:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+  .navbar-list li a:hover {
+    text-decoration: none;
+    color:var(--primary);
+  }
+  
+  /*carrito */
+  
+  .cart-icon {
+    transition: all 0.2s ease-out;
+  }
+  
+  .cart-icon:hover {
+    color: var(--primary);
+    transition: all 0.2s ease-in;
+  }
+  
+  /*botones del carrito*/
+  .quantity-handler {
+    transition: all 0.2s ease-in;
+  }
+  
+  .quantity-handler:hover {
+    cursor: pointer;
+    background-color: var(--electric);
+    transition: all 0.2s ease-in;
+  }
+  
+  /*botones*/
+  .btn-add,
+  .hero-info a {
+    transition: all 0.2s ease-out;
+  }
+  
+  .btn-add:hover,
+  .hero-info a:hover {
+    background-color: white;
+    transition: all 0.2s ease-in;
+    color: black;
+  }
+  
+  /* boton ver mas de la sección de productos */
+  .btn-load {
+    transition: all 0.2s ease-out;
+    font-weight: 600;
+  }
+  
+  .btn-load:hover {
+    background-color:#bd0e1a82;
+    color: var(--text-white);
+    transition: all 0.2s ease-in;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-up {
+    from {
+      transform: translateY(100px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  
+  @keyframes slide-right {
+    from {
+      transform: translateX(100px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* animacion al h1 */
+  .hero-info h1 {
+    animation: fade 1s ease-in, slide-up 1.3s ease-in-out;
+  }
+  
+  /* animacion al p */
+  .hero-info p {
+    opacity: 0;
+    animation: fade 0.8s ease-in forwards, slide-up 0.9s ease-in-out;
+    animation-delay: 0.3s;
+  }
+  
+  /* animacion al boton */
+  .hero-info a {
+    opacity: 0;
+    animation: fade 0.8s ease-in forwards, slide-up 0.9s ease-in-out;
+    animation-delay: 0.4s;
+  }
+  
+  /* animacion a la card del hero */
+  .hero-card {
+    opacity: 0;
+    animation: fade 1s ease-in forwards, slide-right 1.3s ease-in-out;
+    animation-delay: 0.2s;
+  }
+  
+  /* animacion Seccion 2 */
+  #info h2 {
+    opacity: 0;
+    animation: fade 0.8s ease-in forwards, slide-up 0.9s ease-in-out;
+    animation-delay: 0.4s;
+  }
+  
+  /* animacion cards seccion 2 */
+  .info-card {
+    opacity: 0;
+    animation: fade 0.8s ease-in forwards, slide-up 1.3s ease-in-out;
+  }
+  
+  /*aplicamos un delay a las cards*/
+  .info-card:nth-child(1) {
+    animation-delay: 0.8s;
+  }
+  .info-card:nth-child(2) {
+    animation-delay: 0.7s;
+  }
+  .info-card:nth-child(3) {
+    animation-delay: 1s;
+  }
+  
+  /*microinteracción para las imagenes de las cards de productos*/
+  .product img {
+    transition: all 0.3s linear;
+  }
+  
+  .product img:hover {
+    transform: scale(1.02);
+    transition: all 0.3s linear;
+  }
